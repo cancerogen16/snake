@@ -1,0 +1,6 @@
+.vs
+snake/bin/
+snake/obj/
+snake/.vs/
+*.csproj
+*.sln
