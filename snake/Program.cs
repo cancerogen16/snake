@@ -28,20 +28,18 @@ namespace snake
 
             snake.Draw();
 
-            snake.Move();
-            Thread.Sleep(300);
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
 
-            snake.Move();
-            Thread.Sleep(300);
+                    snake.HandleKey(key.Key);
+                }
 
-            snake.Move();
-            Thread.Sleep(300);
-
-            snake.Move();
-            Thread.Sleep(300);
-
-            snake.Move();
-            Thread.Sleep(300);
+                Thread.Sleep(100);
+                snake.Move();
+            }
 
             Console.ReadLine();
         }
